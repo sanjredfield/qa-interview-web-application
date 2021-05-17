@@ -1,43 +1,10 @@
-# Conduct effective QA interviews using this web application as a backdrop
-
-This simple web application is an ideal 'product' for interviewing QA. Think of it as the '[fizz-buzz](https://www.hackerrank.com/challenges/fizzbuzz/problem)' equivalent for QA. We recommend reserving one round (between 30-60 minutes) of the interview for testing this application. 
-
-This application was designed by [Qxf2 Services](https://www.qxf2.com/?utm_source=qa-interview&utm_medium=click&utm_campaign=From%20QA%20Interview). Qxf2 provides QA for startups.
-
-For convenience, this app has been hosted at: [http://qainterview.pythonanywhere.com](http://qainterview.pythonanywhere.com). 
-
-
-## Features of the 'Fizz buzz for QA' application
-
-1. The app has been seeded with a variety of bugs:
-
-* a major functional bug
-* a data limit bug
-* a usability bug
-* a typo
-* a bug to test if the QA is reading the page content
-* a slightly weird wording 
-* a cross-browser bug 
-
-2. The app also has several workflows which will work well and that the QA being interviewed should check. 
-
-* E.g.: Entering an integer followed by a string followed by an integer (does the form validation clear?)
-
-3. You can use this app to conduct more technical interviews too. You can ask the candidate to: 
-
-* write a locator (CSS selector/XPath) for the red form validation styling
-* find the console message printed
-* write a Selenium script to test that the factorial of 5 is 120
-* figure out the API call being made along with the headers and parameters sent 
-* write a bug report
-* document a test case
-
-
 ## Setup
 
-This app has been hosted at: [http://qainterview.pythonanywhere.com](http://qainterview.pythonanywhere.com). Follow this setup only if you want to use a local copy of this application. 
+To run this application locally. 
 
-1. `pip install requirements.txt`
+1. `python3 -m venv env`
+2. `. env/bin/activate`
+2. `pip install -r requirements.txt`
 
 
 ## How to run the QA interview application

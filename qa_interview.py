@@ -16,19 +16,26 @@ def calculate_factorial(n):
     else:
         return n*calculate_factorial(n-1)
 
-@app.route("/", methods=['GET', 'POST'])
-@app.route("/factorial", methods=['GET', 'POST'])
+@app.route("/", methods=['GET'])
+def index():
+    return render_template('calculator.html')
+
+@app.route("/factorial", methods=['POST'])
 def factorial():
-    "Endpoint for calculating the factorial of a number"
-    if request.method == 'GET':
-        #return the form
-        return render_template('factorial.html')
-    if request.method == 'POST':
-        #return the answer
-        number = int(request.form.get('number'))
-        result = calculate_factorial(number)
-        api_response = {"answer": result}
-        return jsonify(api_response)
+    #return the answer
+    number = int(request.form.get('number'))
+    result = calculate_factorial(number)
+    api_response = {"answer": result}
+    return jsonify(api_response)
+
+@app.route("/division", methods=['POST'])
+def division():
+    #return the answer
+    numerator = int(request.form.get('numerator'))
+    denominator = int(request.form.get('denominator'))
+    result = numerator / denominator
+    api_response = {"answer": result}
+    return jsonify(api_response)
 
 @app.route("/terms")
 def terms_and_conditions():
